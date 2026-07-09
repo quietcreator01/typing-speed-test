@@ -1,4 +1,5 @@
 // STATE
+const API_URL = "https://typing-speed-test-7mgp.onrender.com";
 let difficulty = "easy";
 let mode = "timed";
 let passage = "";
@@ -33,7 +34,7 @@ async function loadPersonalBest() {
         return;
     }
     try {
-        const res = await fetch(`http://localhost:5000/api/scores/mine?username=${username}&difficulty=${difficulty}&mode=${mode}`);
+        const res = await fetch(`${API_URL}/api/scores/mine?username=${username}&difficulty=${difficulty}&mode=${mode}`);
         const data = await res.json();
         bestWpmStat.textContent = `${data.wpm} WPM`;
     } catch (err) {
@@ -132,7 +133,7 @@ textDisplay.addEventListener("click", () => { if (!isTestRunning) startTest(); }
 
 // PASSAGE HANDLING
 async function pickPassage() {
-  const res = await fetch(`http://localhost:5000/api/passages?difficulty=${difficulty}`);
+  const res = await fetch(`${API_URL}/api/passages?difficulty=${difficulty}`);
   const json = await res.json();
   return json.text;
 }
@@ -224,7 +225,7 @@ document.getElementById("save-score-btn").addEventListener("click", async () => 
     if (!username || !password || !pendingScore) return;
 
     try {
-        const res = await fetch("http://localhost:5000/api/scores", {
+        const res = await fetch(`${API_URL}/api/scores`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ username, password, ...pendingScore, difficulty, mode })
@@ -256,7 +257,7 @@ async function loadLeaderboard() {
     try {
         const activeBtn = document.querySelector(".lb-filter-btn.active");
         const lbDifficulty = activeBtn ? activeBtn.dataset.lbDifficulty : "easy";
-        const res = await fetch(`http://localhost:5000/api/scores/top?difficulty=${lbDifficulty}`);
+        const res = await fetch(`${API_URL}/api/scores/top?difficulty=${lbDifficulty}`);
         const scores = await res.json();
         const list = document.getElementById("leaderboard-list");
         if (!list) return;
