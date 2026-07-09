@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <div class="header-left">
+                <h1>Typing Speed Test</h1>
+                <p>Type as fast as you can in 60 seconds</p>
+            </div>
+            <div class="personal-best">
+                <span class="full-test">Personal best: </span><span class="short-text">Best: </span><span id="best-wpm">0 WPM</span> 
+            </div>
+        </header>
+
+        <div class="test-container">
+            <div class="top-row">
+
+                <!-- LIVE STATS -->
+                <div class="stats-bar" aria-live="polite">
+                    <span id="wpm-stat">WPM: <b>0</b></span>
+                    <span id="accuracy-stat">Accuracy: <b>0%</b></span>
+                    <span id="time-stat">Time: <b>0:00</b></span>
+                </div>
+
+                <!-- DESKTOP CONTROLS: difficulty + mode pill buttons -->
+                <div class="controls">
+                    <div class="difficulty-group">
+                        <span>Difficulty:</span>
+                        <button class="difficulty-btn active" data-difficulty="easy">Easy <i class="fa-solid fa-chevron-down chevron"></i></button>
+                        <button class="difficulty-btn" data-difficulty="medium">Medium <i class="fa-solid fa-chevron-down chevron"></i></button>
+                        <button class="difficulty-btn" data-difficulty="hard">Hard <i class="fa-solid fa-chevron-down chevron"></i></button>
+                    </div>
+
+                    <div class="mode-group">
+                        <span>Mode:</span>
+                        <button class="mode-btn active" data-mode="timed">Timed (60s) <i class="fa-solid fa-chevron-down chevron"></i></button>
+                        <button class="mode-btn" data-mode="passage">Passage <i class="fa-solid fa-chevron-down chevron"></i></button>
+                    </div>
+                </div>
+
+                <!-- MOBILE CONTROLS: difficulty + mode dropdowns -->
+                <div class="dropdown-controls">
+                    <div class="dropdown" id="difficulty-dropdown">
+                        <button class="dropdown-toggle">
+                            <span id="difficulty-label">Easy</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <button data-difficulty="easy">Easy</button>
+                            <button data-difficulty="medium">Medium</button>
+                            <button data-difficulty="hard">Hard</button>
+                        </div>
+                    </div>
+
+                    <div class="dropdown" id="mode-dropdown">
+                        <button class="dropdown-toggle">
+                            <span id="mode-label">Timed (60s)</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <button data-mode="timed">Timed (60s)</button>
+                            <button data-mode="passage">Passage</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- TYPING AREA -->
+            <div id="text-container" class="hidden">
+                <div id="text-display"></div>
+                <textarea id="text-input" placeholder="Start typing here..." disabled></textarea>
+            </div>
+
+            <!-- START / RESTART -->
+            <button id="start-btn">Start Test</button>
+            <p id="start-subtext">Or click the text and start typing</p>
+            <hr>
+            <button id="restart-btn" class="hidden">Restart <i class="fa-solid fa-rotate-left"></i></button>
+
+            <!-- RESULTS -->
+            <div id="result-container" class="hidden">
+                <div id="result-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h2 id="result-title">Test Complete!</h2>
+                <p id="result-message">Solid run. Keep pushing to beat your high score.</p>
+
+                <div class="result-card">
+                    <span class="result-label">WPM:</span>
+                    <span id="final-wpm" class="result-value">0</span>
+                </div>
+                <div class="result-card">
+                    <span class="result-label">Accuracy:</span>
+                    <span id="final-accuracy" class="result-value accuracy">0%</span>
+                </div>
+                <div class="result-card">
+                    <span class="result-label">Characters</span>
+                    <span id="char-count" class="result-value chars">0<span class="chars-sep">/</span><span class="chars-incorrect">0</span></span>
+                </div>
+
+                <div id="save-score-box">
+                    <input type="text" id="player-username" placeholder="Username" maxlength="20" disabled>
+                    <input type="password" id="player-password" placeholder="Password" maxlength="30" disabled>
+                    <button id="save-score-btn" disabled>Save Score</button>
+                    <p id="save-score-error"></p>
+                </div>
+
+                <button id="retry-btn">Go Again <i class="fa-solid fa-rotate-left"></i></button>
+            </div>
+        </div>
+
+        <!-- WIN ANIMATION -->
+        <canvas id="confetti-canvas"></canvas>
+
+    </div>
+
+    <div id="leaderboard-container">
+        <h2>Top Scores</h2>
+        <div class="leaderboard-filter">
+            <button class="lb-filter-btn active" data-lb-difficulty="easy">Easy</button>
+            <button class="lb-filter-btn" data-lb-difficulty="medium">Medium</button>
+            <button class="lb-filter-btn" data-lb-difficulty="hard">Hard</button>
+        </div>
+        <ol id="leaderboard-list"></ol>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

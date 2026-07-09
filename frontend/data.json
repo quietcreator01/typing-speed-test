@@ -1,0 +1,38 @@
+{
+  "easy": [
+    "The sun was warm and the sky was clear. Birds sang in the trees while children played in the park nearby.",
+    "She walked to the store to buy some milk and bread. On her way back home, she saw an old friend.",
+    "My dog loves to run in the yard every morning. He barks at squirrels and chases his favorite ball.",
+    "We had pizza for dinner last night. It was so good that we decided to order it again this weekend.",
+    "The rain stopped just before noon, so we packed a small lunch and walked down to the lake to feed the ducks.",
+    "He forgot his umbrella at home again, so he had to run through the rain to catch the last bus of the evening.",
+    "Our teacher gave us a fun project this week. We get to build a small model of our favorite animal using clay.",
+    "The bakery on the corner sells fresh bread every morning. The smell fills the whole street before the sun even rises.",
+    "She planted tomatoes and peppers in the garden this spring. By summer, the whole backyard smelled like fresh herbs.",
+    "On Saturdays, my family likes to ride bikes along the river trail and stop for ice cream at the little shop near the bridge."
+  ],
+  "medium": [
+    "Learning to code can be challenging at first, but with consistent practice and patience, anyone can develop the skills needed to build meaningful software projects.",
+    "The museum recently unveiled a new exhibit featuring artifacts from ancient civilizations, drawing large crowds eager to learn about history.",
+    "Remote work has changed the way many companies operate, forcing managers to rethink communication, collaboration, and how they measure productivity.",
+    "The recipe called for fresh basil, ripe tomatoes, and a generous drizzle of olive oil, simple ingredients that combined to create something surprisingly delicious.",
+    "As cities continue to grow, urban planners are increasingly focused on designing public spaces that encourage walking, cycling, and community interaction rather than relying solely on cars.",
+    "The novel's protagonist spends much of the story questioning her choices, wrestling with the tension between the life she was expected to lead and the one she truly wants.",
+    "Renewable energy sources like solar and wind have become significantly cheaper over the past decade, making them increasingly competitive with traditional fossil fuels in many markets.",
+    "Training for a marathon requires more than just running long distances; it demands attention to nutrition, sleep, recovery, and a training plan that gradually builds endurance without causing injury.",
+    "The company's quarterly report revealed steady growth in overseas markets, even as domestic sales remained flat due to increased competition and shifting consumer preferences.",
+    "Effective communication in the workplace often depends less on what is said and more on how well people listen, ask questions, and adapt their message to their audience."
+  ],
+  "hard": [
+    "The archaeological expedition unearthed artifacts that complicated prevailing theories about Bronze Age trade networks. Obsidian from Anatolia, lapis lazuli from Afghanistan, and amber from the Baltic - all discovered in a single Mycenaean tomb - suggested commercial connections far more extensive than previously hypothesized. 'We've underestimated ancient peoples' navigational capabilities and their appetite for luxury goods,' the lead researcher observed. 'Globalization isn't as modern as we assume.'",
+    "Quantum entanglement, a phenomenon Einstein famously derided as 'spooky action at a distance,' continues to challenge our classical intuitions about locality and causality, prompting physicists to reconsider the fundamental nature of reality itself.",
+    "The committee's decision to restructure the organization's governance model triggered immediate backlash from stakeholders who argued that the proposed changes, while ostensibly designed to improve transparency, would in practice concentrate decision-making authority among a smaller, less accountable group of executives.",
+    "Neuroplasticity research has demonstrated that the adult brain retains a remarkable capacity for reorganization, challenging the once-dominant assumption that cognitive development effectively concludes after childhood and adolescence.",
+    "Macroeconomic forecasting remains a notoriously imprecise discipline, not because economists lack sophisticated models, but because human behavior, geopolitical shocks, and feedback loops between markets and policy introduce a degree of complexity that resists reliable quantification. Even the most rigorously constructed models routinely fail to anticipate recessions, currency crises, or sudden shifts in consumer confidence, a limitation that has led some economists to argue the field should abandon precise point predictions altogether in favor of probabilistic ranges.",
+    "The philosophical debate over free will versus determinism has persisted for centuries, largely because both positions can be defended with internally consistent logic while producing radically different implications for moral responsibility, criminal justice, and how societies ought to treat individuals who commit harmful acts.",
+    "Epigenetic modifications, unlike mutations in the underlying DNA sequence, can alter gene expression in ways that are sometimes heritable across generations, raising provocative questions about how environmental factors experienced by grandparents might shape the physiology of their descendants.",
+    "The negotiation ultimately collapsed not because the two parties disagreed on the substantive terms of the agreement, but because a fundamental breakdown in trust, cultivated over years of prior disputes, made neither side willing to accept concessions that might otherwise have seemed reasonable.",
+    "Climate models rely on an intricate web of assumptions about feedback mechanisms, ranging from ice albedo effects to ocean heat absorption, and while the broad consensus on anthropogenic warming remains robust, the precise magnitude and regional distribution of future impacts continue to carry significant uncertainty.",
+    "The legal doctrine of stare decisis, which obligates courts to follow precedent, exists in perpetual tension with the recognition that some precedents, shaped by the prejudices or limited understanding of earlier eras, ought eventually to be overturned rather than perpetually upheld in the name of consistency."
+  ]
+}
